@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "655813366043",
+    "project_id": "tall-solucoes",
+    "storage_bucket": "tall-solucoes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:655813366043:android:4fbb2fc4c9a5d7495d03be",
+        "android_client_info": {
+          "package_name": "com.wandersilva.tallsolucoes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0S-LX_xA13DS_SFfAmjjWcrNYvEh166E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
