@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:provider/provider.dart';
 
 import '/auth/base_auth_user_provider.dart';
@@ -90,6 +89,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Home',
           path: '/home',
           builder: (context, params) => const HomeWidget(),
+        ),
+        FFRoute(
+          name: 'HomeCopy',
+          path: '/homeCopy',
+          builder: (context, params) => const HomeCopyWidget(),
+        ),
+        FFRoute(
+          name: 'politicas',
+          path: '/politicas',
+          builder: (context, params) => const PoliticasWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -269,13 +278,13 @@ class FFRoute {
                 )
               : builder(context, ffParams);
           final child = appStateNotifier.loading
-              ? Center(
-                  child: SizedBox(
-                    width: 50.0,
-                    height: 50.0,
-                    child: SpinKitWave(
-                      color: FlutterFlowTheme.of(context).primary,
-                      size: 50.0,
+              ? Container(
+                  color: FlutterFlowTheme.of(context).primary,
+                  child: Center(
+                    child: Image.asset(
+                      'assets/images/logo-branco.png',
+                      width: MediaQuery.sizeOf(context).width * 0.8,
+                      fit: BoxFit.contain,
                     ),
                   ),
                 )

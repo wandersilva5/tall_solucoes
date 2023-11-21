@@ -7,25 +7,25 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'home_model.dart';
-export 'home_model.dart';
+import 'home_copy_model.dart';
+export 'home_copy_model.dart';
 
-class HomeWidget extends StatefulWidget {
-  const HomeWidget({super.key});
+class HomeCopyWidget extends StatefulWidget {
+  const HomeCopyWidget({super.key});
 
   @override
-  _HomeWidgetState createState() => _HomeWidgetState();
+  _HomeCopyWidgetState createState() => _HomeCopyWidgetState();
 }
 
-class _HomeWidgetState extends State<HomeWidget> {
-  late HomeModel _model;
+class _HomeCopyWidgetState extends State<HomeCopyWidget> {
+  late HomeCopyModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => HomeModel());
+    _model = createModel(context, () => HomeCopyModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
